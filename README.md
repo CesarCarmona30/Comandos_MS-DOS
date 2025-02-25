@@ -6,39 +6,39 @@ Este programa en C consiste en comprender y experimentar con los comandos básic
 
 El código fuente, contenido en miniDOS.c, implementa un menú que permite ejecutar los siguientes comandos:
 
-- ver: Muestra la versión del sistema.
+- **ver:** Muestra la versión del sistema.
 
-- cls: Limpia la pantalla de la terminal.
+- **cls:** Limpia la pantalla de la terminal.
 
-- dir: Lista los directorios y archivos.
+- **dir:** Lista los directorios y archivos.
 
-- date /t: Muestra la fecha actual.
+- **date /t:** Muestra la fecha actual.
 
-- time /t: Muestra la hora actual.
+- **time /t:** Muestra la hora actual.
 
-- type: Muestra el contenido de un archivo.
+- **type:** Muestra el contenido de un archivo.
 
-- del: Elimina un archivo.
+- **del:** Elimina un archivo.
 
-- copy: Copia un archivo.
+- **copy:** Copia un archivo.
 
-- mkdir: Crea un directorio.
+- **mkdir:** Crea un directorio.
 
-- rd: Elimina un directorio.
+- **rd:** Elimina un directorio.
 
-- tree: Muestra la estructura de directorios en forma de árbol.
+- **tree:** Muestra la estructura de directorios en forma de árbol.
 
-- ren: Renombra un archivo.
+- **ren:** Renombra un archivo.
 
-- help: Muestra ayuda del sistema.
+- **help:** Muestra ayuda del sistema.
 
-- attrib: Muestra los atributos de los archivos.
+- **attrib:** Muestra los atributos de los archivos.
 
-- cd: Cambia el directorio actual.
+- **cd:** Cambia el directorio actual.
 
-- mv (o move): Mueve archivos.
+- **mv:** Mueve archivos.
 
-- shutdown: Apaga el equipo (con opción de cancelar).
+- **shutdown:** Apaga el equipo (con opción de cancelar).
 
 Cada uno de estos comandos se encapsula en funciones individuales, lo que facilita la comprensión del código.
 
