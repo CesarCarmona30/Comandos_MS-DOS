@@ -46,10 +46,9 @@ Cada uno de estos comandos se encapsula en funciones individuales, lo que facili
 
 Para compilar el programa, abre la terminal y ejecuta el siguiente comando (asegurándote de tener instalado un compilador de C, como GCC):
 
-bash```
+```
 gcc miniDOS.c -o miniDOS.exe
-
-````
+```
 
 Nota: Este código está diseñado para entornos Windows, ya que utiliza comandos propios de MSDOS/Windows.
 
@@ -57,9 +56,9 @@ Nota: Este código está diseñado para entornos Windows, ya que utiliza comando
 
 Una vez compilado, ejecuta el programa desde la terminal con:
 
-bash```
+```
 miniDOS.exe
-````
+```
 
 Al iniciarse, el programa desplegará un menú interactivo que te permitirá seleccionar y probar cada uno de los comandos.
 
