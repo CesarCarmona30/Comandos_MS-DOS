@@ -153,7 +153,7 @@ void salir()
 // Función para el menú
 void menu()
 {
-  for (int i = 0; i <= 100; i++)
+  for (int i = 0; i <= 75; i++)
   {
     printf("_");
   }
@@ -166,7 +166,7 @@ void menu()
   printf("5) Renombrar          10) Arbol              15) Contenido directorio\n");
   printf("                                             16) Salir         OPCION?_");
   scanf("%d", &opcion);
-  for (int i = 0; i <= 100; i++)
+  for (int i = 0; i <= 75; i++)
   {
     printf("_");
   }
