@@ -28,7 +28,8 @@ void crear_archivo()
   char comando[150];
   printf("Escribe el nombre del archivo (con extension): ");
   scanf("%s", nombreArchivo);
-  sprintf(comando, "type nul > %s", nombreArchivo);
+  sprintf(comando, "copy con %s", nombreArchivo);
+  printf("Escribe el contenido del archivo, para finalizar teclea Ctrl + Z\n");
   system(comando);
 }
 
@@ -153,24 +154,26 @@ void salir()
 // Función para el menú
 void menu()
 {
-  for (int i = 0; i <= 75; i++)
+  for (int i = 0; i <= 80; i++)
   {
     printf("_");
   }
 
-  printf("\n                               MENU                               \n");
-  printf("1) Limpiar             6) Fecha              11) Hora\n");
-  printf("2) Borrar              7) Copiar             12) Mover\n");
-  printf("3) Crear archivo       8) Version            13) Ver archivo\n");
-  printf("4) Crear directorio    9) Borrar directorio  14) Ayuda\n");
-  printf("5) Renombrar          10) Arbol              15) Contenido directorio\n");
-  printf("                                             16) Salir         OPCION?_");
+  printf("\n|                                 MENU                                          |\n");
+  printf("|                                                                               |\n");
+  printf("|     1) Limpiar            6) Fecha               11) Hora                     |\n");
+  printf("|     2) Borrar             7) Copiar              12) Mover                    |\n");
+  printf("|     3) Crear archivo      8) Version             13) Ver archivo              |\n");
+  printf("|     4) Crear directorio   9) Borrar directorio   14) Ayuda                    |\n");
+  printf("|     5) Renombrar         10) Arbol               15) Contenido directorio     |\n");
+  printf("|                                                  16) Salir                    |\n");
+  printf("|                                                             OPCION?_");
   scanf("%d", &opcion);
-  for (int i = 0; i <= 75; i++)
+  for (int i = 0; i <= 80; i++)
   {
     printf("_");
   }
-  printf("\n");
+  printf("|\n");
 }
 
 void ejecuta()
