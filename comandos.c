@@ -1,8 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
+#include <stdio.h>  // printf y scanf
+#include <stdlib.h> // system y exit
+#include <string.h> // strcat
 
 int opcion = 0;
+
+void imprimirLineas()
+{
+  for (int i = 0; i <= 80; i++)
+  {
+    printf("_");
+  }
+  printf("\n\n");
+}
 
 // Función para limpiar la terminal
 void limpiar()
@@ -14,10 +23,10 @@ void limpiar()
 void borrar()
 {
   char nombreArchivo[50];
-  char comando[100];
+  char comando[100] = "del ";
   printf("Escribe el nombre del archivo: ");
   scanf("%s", nombreArchivo);
-  sprintf(comando, "del %s", nombreArchivo);
+  strcat(comando, nombreArchivo);
   system(comando);
 }
 
@@ -25,11 +34,11 @@ void borrar()
 void crear_archivo()
 {
   char nombreArchivo[50];
-  char comando[150];
+  char comando[150] = "copy con ";
   printf("Escribe el nombre del archivo (con extension): ");
   scanf("%s", nombreArchivo);
-  sprintf(comando, "copy con %s", nombreArchivo);
-  printf("Escribe el contenido del archivo, para finalizar teclea Ctrl + Z\n");
+  strcat(comando, nombreArchivo);
+  printf("Escribe el contenido del archivo, para finalizar teclea Ctrl + Z...\n");
   system(comando);
 }
 
@@ -37,10 +46,10 @@ void crear_archivo()
 void crear_directorio()
 {
   char nombreDirectorio[50];
-  char comando[100];
+  char comando[100] = "mkdir ";
   printf("Escribe el nombre del directorio: ");
   scanf("%s", nombreDirectorio);
-  sprintf(comando, "mkdir %s", nombreDirectorio);
+  strcat(comando, nombreDirectorio);
   system(comando);
 }
 
@@ -88,10 +97,10 @@ void version()
 void borrar_directorio()
 {
   char nombreDirectorio[50];
-  char comando[100];
+  char comando[100] = "rd ";
   printf("Escribe el nombre del directorio: ");
   scanf("%s", nombreDirectorio);
-  sprintf(comando, "rd %s", nombreDirectorio);
+  strcat(comando, nombreDirectorio);
   system(comando);
 }
 
@@ -125,10 +134,10 @@ void mover()
 void ver_archivo()
 {
   char nombreArchivo[50];
-  char comando[100];
+  char comando[100] = "type ";
   printf("Escribe el nombre del archivo (con extension): ");
   scanf("%s", nombreArchivo);
-  sprintf(comando, "type %s", nombreArchivo);
+  strcat(comando, nombreArchivo);
   system(comando);
 }
 
@@ -158,18 +167,18 @@ void menu()
   {
     printf("_");
   }
-
   printf("\n|                                 MENU                                          |\n");
   printf("|                                                                               |\n");
-  printf("|     1) Limpiar            6) Fecha               11) Hora                     |\n");
-  printf("|     2) Borrar             7) Copiar              12) Mover                    |\n");
-  printf("|     3) Crear archivo      8) Version             13) Ver archivo              |\n");
-  printf("|     4) Crear directorio   9) Borrar directorio   14) Ayuda                    |\n");
-  printf("|     5) Renombrar         10) Arbol               15) Contenido directorio     |\n");
-  printf("|                                                  16) Salir                    |\n");
+  printf("|    1) Limpiar             6) Fecha                11) Hora                    |\n");
+  printf("|    2) Borrar              7) Copiar               12) Mover                   |\n");
+  printf("|    3) Crear archivo       8) Version              13) Ver archivo             |\n");
+  printf("|    4) Crear directorio    9) Borrar directorio    14) Ayuda                   |\n");
+  printf("|    5) Renombrar          10) Arbol                15) Contenido directorio    |\n");
+  printf("|                                                   16) Salir                   |\n");
   printf("|                                                             OPCION?_");
   scanf("%d", &opcion);
-  for (int i = 0; i <= 80; i++)
+  printf("|");
+  for (int i = 1; i < 80; i++)
   {
     printf("_");
   }
@@ -178,6 +187,7 @@ void menu()
 
 void ejecuta()
 {
+  imprimirLineas();
   switch (opcion)
   {
   case 1:
@@ -232,6 +242,7 @@ void ejecuta()
     printf("Error. Opcion no valida");
     menu();
   }
+  imprimirLineas();
 }
 
 int main()
